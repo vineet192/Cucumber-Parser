@@ -41,16 +41,27 @@ public class LoginSteps {
 
 	}
 
-	@When("user enters username and password")
-	public void user_enters_username_and_password() {
-
+//	@When("user enters username and password")
+//	public void user_enters_username_and_password() {
+//
+//		System.out.println("Entering username and password");
+//		
+//		username = driver.findElement(By.id("username"));
+//		password = driver.findElement(By.id("password"));
+//		username.sendKeys("exampleuser");
+//		password.sendKeys("examplepass");
+//
+//	}
+	
+	@When("user enters {string} and {string}")
+	public void user_enters_and(String string, String string2) {
+	    // Write code here that turns the phrase above into concrete actions
 		System.out.println("Entering username and password");
 		
 		username = driver.findElement(By.id("username"));
 		password = driver.findElement(By.id("password"));
-		username.sendKeys("exampleuser");
-		password.sendKeys("examplepass");
-
+		username.sendKeys(string);
+		password.sendKeys(string2);
 	}
 
 	@And("user clicks on login")
