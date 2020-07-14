@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>1/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>1/2/0</td>
 </tr><tr>
-<td>Started on:</td><td>Wed Jul 08 17:51:04 IST 2020</td>
+<td>Started on:</td><td>Tue Jul 14 17:17:29 IST 2020</td>
 </tr>
-<tr><td>Total time:</td><td>11 seconds (11081 ms)</td>
+<tr><td>Total time:</td><td>2 seconds (2300 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,6 +67,62 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='cucumber_parser.TestNGRunner.runScenario()'><b>runScenario</b><br>Test class: cucumber_parser.TestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Simple login test", "Optional[Login functionality]"</td>
+<td><div><pre>java.lang.AssertionError: expected [http://localhost:8080/cucumber_parser/homepage.html] but found [null]
+	at org.testng.Assert.fail(Assert.java:97)
+	at org.testng.Assert.failNotEquals(Assert.java:969)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:131)
+	at org.testng.Assert.assertEquals(Assert.java:118)
+	at org.testng.Assert.assertEquals(Assert.java:575)
+	at org.testng.Assert.assertEquals(Assert.java:585)
+	at StepDefinitions.LoginSteps.user_is_navigated_to_homepage(LoginSteps.java:72)
+	at ?.user is navigated to homepage(file:///C:/Users/V.X.V.K/eclipse-workspace/cucumber_parser/src/test/resources/Features/login.feature:25)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1130598644", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1130598644'><pre>java.lang.AssertionError: expected [http://localhost:8080/cucumber_parser/homepage.html] but found [null]
+	at org.testng.Assert.fail(Assert.java:97)
+	at org.testng.Assert.failNotEquals(Assert.java:969)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:131)
+	at org.testng.Assert.assertEquals(Assert.java:118)
+	at org.testng.Assert.assertEquals(Assert.java:575)
+	at org.testng.Assert.assertEquals(Assert.java:585)
+	at StepDefinitions.LoginSteps.user_is_navigated_to_homepage(LoginSteps.java:72)
+	at ?.user is navigated to homepage(file:///C:/Users/V.X.V.K/eclipse-workspace/cucumber_parser/src/test/resources/Features/login.feature:25)
+</pre></div></td>
+<td>0</td>
+<td>cucumber_parser.TestNGRunner@78e67e0a</td></tr>
+<tr>
+<td title='cucumber_parser.TestNGRunner.runScenario()'><b>runScenario</b><br>Test class: cucumber_parser.TestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Simple login test", "Optional[Login functionality]"</td>
+<td><div><pre>java.lang.AssertionError: expected [http://localhost:8080/cucumber_parser/homepage.html] but found [null]
+	at org.testng.Assert.fail(Assert.java:97)
+	at org.testng.Assert.failNotEquals(Assert.java:969)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:131)
+	at org.testng.Assert.assertEquals(Assert.java:118)
+	at org.testng.Assert.assertEquals(Assert.java:575)
+	at org.testng.Assert.assertEquals(Assert.java:585)
+	at StepDefinitions.LoginSteps.user_is_navigated_to_homepage(LoginSteps.java:72)
+	at ?.user is navigated to homepage(file:///C:/Users/V.X.V.K/eclipse-workspace/cucumber_parser/src/test/resources/Features/login.feature:25)
+</pre></div><a href='#' onClick='toggleBox("stack-trace814377348", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace814377348'><pre>java.lang.AssertionError: expected [http://localhost:8080/cucumber_parser/homepage.html] but found [null]
+	at org.testng.Assert.fail(Assert.java:97)
+	at org.testng.Assert.failNotEquals(Assert.java:969)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:131)
+	at org.testng.Assert.assertEquals(Assert.java:118)
+	at org.testng.Assert.assertEquals(Assert.java:575)
+	at org.testng.Assert.assertEquals(Assert.java:585)
+	at StepDefinitions.LoginSteps.user_is_navigated_to_homepage(LoginSteps.java:72)
+	at ?.user is navigated to homepage(file:///C:/Users/V.X.V.K/eclipse-workspace/cucumber_parser/src/test/resources/Features/login.feature:25)
+</pre></div></td>
+<td>0</td>
+<td>cucumber_parser.TestNGRunner@78e67e0a</td></tr>
+</table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
@@ -77,8 +133,8 @@ function toggleAllBoxes() {
 <tr>
 <td title='cucumber_parser.TestNGRunner.runScenario()'><b>runScenario</b><br>Test class: cucumber_parser.TestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Simple login test", "Optional[Login functionality]"</td>
 <td></td>
-<td>10</td>
-<td>cucumber_parser.TestNGRunner@3b088d51</td></tr>
+<td>0</td>
+<td>cucumber_parser.TestNGRunner@78e67e0a</td></tr>
 </table><p>
 </body>
 </html>

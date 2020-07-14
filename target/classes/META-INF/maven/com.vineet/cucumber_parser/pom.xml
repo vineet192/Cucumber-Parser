@@ -47,6 +47,11 @@
 			<version>29.0-jre</version>
 		</dependency>
 
+		<dependency>
+			<groupId>net.masterthought</groupId>
+			<artifactId>cucumber-reporting</artifactId>
+			<version>4.0.0</version>
+		</dependency>
 
 	</dependencies>
 </project>

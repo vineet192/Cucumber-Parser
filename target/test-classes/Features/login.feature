@@ -19,18 +19,11 @@
 Feature: Login functionality
 
   Scenario Outline: Simple login test
-    Given Browser is open
-    And user is on login page
+    Given user is on login page
     When user enters "<username>" and "<password>"
     And user clicks on login
     Then user is navigated to homepage
 
-		Examples :
-    #!Simple login test
-    
-    #!feature2
-    
-    #notafeature
-    
-    #!lastfeature
+    Examples: 
+    	#!Simple login functionality
 

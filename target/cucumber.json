@@ -1,0 +1,222 @@
+[
+  {
+    "line": 19,
+    "elements": [
+      {
+        "start_timestamp": "2020-07-14T11:47:30.268Z",
+        "line": 29,
+        "name": "Simple login test",
+        "description": "",
+        "id": "login-functionality;simple-login-test;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 194000000,
+              "status": "passed"
+            },
+            "line": 22,
+            "name": "user is on login page",
+            "match": {
+              "location": "StepDefinitions.LoginSteps.user_is_on_login_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 262000000,
+              "status": "passed"
+            },
+            "line": 23,
+            "name": "user enters \"vineet\" and \"password1\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"vineet\"",
+                  "offset": 12
+                },
+                {
+                  "val": "\"password1\"",
+                  "offset": 25
+                }
+              ],
+              "location": "StepDefinitions.LoginSteps.user_enters_and(java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 65000000,
+              "status": "passed"
+            },
+            "line": 24,
+            "name": "user clicks on login",
+            "match": {
+              "location": "StepDefinitions.LoginSteps.userc_clicks_on_login()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "error_message": "java.lang.AssertionError: expected [http://localhost:8080/cucumber_parser/homepage.html] but found [null]\r\n\tat org.testng.Assert.fail(Assert.java:97)\r\n\tat org.testng.Assert.failNotEquals(Assert.java:969)\r\n\tat org.testng.Assert.assertEqualsImpl(Assert.java:131)\r\n\tat org.testng.Assert.assertEquals(Assert.java:118)\r\n\tat org.testng.Assert.assertEquals(Assert.java:575)\r\n\tat org.testng.Assert.assertEquals(Assert.java:585)\r\n\tat StepDefinitions.LoginSteps.user_is_navigated_to_homepage(LoginSteps.java:72)\r\n\tat ✽.user is navigated to homepage(file:///C:/Users/V.X.V.K/eclipse-workspace/cucumber_parser/src/test/resources/Features/login.feature:25)\r\n",
+              "duration": 19000000,
+              "status": "failed"
+            },
+            "line": 25,
+            "name": "user is navigated to homepage",
+            "match": {
+              "location": "StepDefinitions.LoginSteps.user_is_navigated_to_homepage()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-07-14T11:47:30.843Z",
+        "line": 30,
+        "name": "Simple login test",
+        "description": "",
+        "id": "login-functionality;simple-login-test;;3",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 31000000,
+              "status": "passed"
+            },
+            "line": 22,
+            "name": "user is on login page",
+            "match": {
+              "location": "StepDefinitions.LoginSteps.user_is_on_login_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 214000000,
+              "status": "passed"
+            },
+            "line": 23,
+            "name": "user enters \"vkalghat\" and \"password2\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"vkalghat\"",
+                  "offset": 12
+                },
+                {
+                  "val": "\"password2\"",
+                  "offset": 27
+                }
+              ],
+              "location": "StepDefinitions.LoginSteps.user_enters_and(java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 66000000,
+              "status": "passed"
+            },
+            "line": 24,
+            "name": "user clicks on login",
+            "match": {
+              "location": "StepDefinitions.LoginSteps.userc_clicks_on_login()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "error_message": "java.lang.AssertionError: expected [http://localhost:8080/cucumber_parser/homepage.html] but found [null]\r\n\tat org.testng.Assert.fail(Assert.java:97)\r\n\tat org.testng.Assert.failNotEquals(Assert.java:969)\r\n\tat org.testng.Assert.assertEqualsImpl(Assert.java:131)\r\n\tat org.testng.Assert.assertEquals(Assert.java:118)\r\n\tat org.testng.Assert.assertEquals(Assert.java:575)\r\n\tat org.testng.Assert.assertEquals(Assert.java:585)\r\n\tat StepDefinitions.LoginSteps.user_is_navigated_to_homepage(LoginSteps.java:72)\r\n\tat ✽.user is navigated to homepage(file:///C:/Users/V.X.V.K/eclipse-workspace/cucumber_parser/src/test/resources/Features/login.feature:25)\r\n",
+              "duration": 5000000,
+              "status": "failed"
+            },
+            "line": 25,
+            "name": "user is navigated to homepage",
+            "match": {
+              "location": "StepDefinitions.LoginSteps.user_is_navigated_to_homepage()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-07-14T11:47:31.166Z",
+        "line": 31,
+        "name": "Simple login test",
+        "description": "",
+        "id": "login-functionality;simple-login-test;;4",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 34000000,
+              "status": "passed"
+            },
+            "line": 22,
+            "name": "user is on login page",
+            "match": {
+              "location": "StepDefinitions.LoginSteps.user_is_on_login_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 209000000,
+              "status": "passed"
+            },
+            "line": 23,
+            "name": "user enters \"exampleuser\" and \"examplepass\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"exampleuser\"",
+                  "offset": 12
+                },
+                {
+                  "val": "\"examplepass\"",
+                  "offset": 30
+                }
+              ],
+              "location": "StepDefinitions.LoginSteps.user_enters_and(java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 78000000,
+              "status": "passed"
+            },
+            "line": 24,
+            "name": "user clicks on login",
+            "match": {
+              "location": "StepDefinitions.LoginSteps.userc_clicks_on_login()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 5000000,
+              "status": "passed"
+            },
+            "line": 25,
+            "name": "user is navigated to homepage",
+            "match": {
+              "location": "StepDefinitions.LoginSteps.user_is_navigated_to_homepage()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "Login functionality",
+    "description": "",
+    "id": "login-functionality",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/Features/login.feature",
+    "tags": []
+  }
+]

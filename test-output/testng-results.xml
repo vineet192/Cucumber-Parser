@@ -1,20 +1,112 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+<testng-results skipped="0" failed="2" ignored="0" total="3" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="11081" started-at="2020-07-08T17:51:04 IST" finished-at="2020-07-08T17:51:15 IST">
+  <suite name="Default suite" duration-ms="2300" started-at="2020-07-14T17:17:29 IST" finished-at="2020-07-14T17:17:32 IST">
     <groups>
       <group name="cucumber">
-        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:cucumber_parser.TestNGRunner@3b088d51]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:cucumber_parser.TestNGRunner@78e67e0a]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test name="Default test" duration-ms="11081" started-at="2020-07-08T17:51:04 IST" finished-at="2020-07-08T17:51:15 IST">
+    <test name="Default test" duration-ms="2300" started-at="2020-07-14T17:17:29 IST" finished-at="2020-07-14T17:17:32 IST">
       <class name="cucumber_parser.TestNGRunner">
-        <test-method status="PASS" signature="setUpClass()[pri:0, instance:cucumber_parser.TestNGRunner@3b088d51]" name="setUpClass" is-config="true" duration-ms="508" started-at="2020-07-08T17:51:04 IST" finished-at="2020-07-08T17:51:05 IST">
+        <test-method status="PASS" signature="initFeatureFile()[pri:0, instance:cucumber_parser.TestNGRunner@78e67e0a]" name="initFeatureFile" is-config="true" duration-ms="14347" started-at="2020-07-14T17:17:15 IST" finished-at="2020-07-14T17:17:29 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initFeatureFile -->
+        <test-method status="PASS" signature="setUpClass()[pri:0, instance:cucumber_parser.TestNGRunner@78e67e0a]" name="setUpClass" is-config="true" duration-ms="344" started-at="2020-07-14T17:17:29 IST" finished-at="2020-07-14T17:17:30 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:cucumber_parser.TestNGRunner@3b088d51]" name="runScenario" duration-ms="10487" started-at="2020-07-08T17:51:05 IST" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2020-07-08T17:51:15 IST">
+        <test-method status="FAIL" signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:cucumber_parser.TestNGRunner@78e67e0a]" name="runScenario" duration-ms="712" started-at="2020-07-14T17:17:30 IST" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2020-07-14T17:17:30 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Simple login test"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Login functionality]"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [http://localhost:8080/cucumber_parser/homepage.html] but found [null]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [http://localhost:8080/cucumber_parser/homepage.html] but found [null]
+at org.testng.Assert.fail(Assert.java:97)
+at org.testng.Assert.failNotEquals(Assert.java:969)
+at org.testng.Assert.assertEqualsImpl(Assert.java:131)
+at org.testng.Assert.assertEquals(Assert.java:118)
+at org.testng.Assert.assertEquals(Assert.java:575)
+at org.testng.Assert.assertEquals(Assert.java:585)
+at StepDefinitions.LoginSteps.user_is_navigated_to_homepage(LoginSteps.java:72)
+at ✽.user is navigated to homepage(file:///C:/Users/V.X.V.K/eclipse-workspace/cucumber_parser/src/test/resources/Features/login.feature:25)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method status="PASS" signature="tearDownr(org.testng.ITestResult)[pri:0, instance:cucumber_parser.TestNGRunner@78e67e0a]" name="tearDownr" is-config="true" duration-ms="1" started-at="2020-07-14T17:17:30 IST" finished-at="2020-07-14T17:17:30 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=runScenario status=FAILURE method=AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:cucumber_parser.TestNGRunner@78e67e0a] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownr -->
+        <test-method status="FAIL" signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:cucumber_parser.TestNGRunner@78e67e0a]" name="runScenario" duration-ms="322" started-at="2020-07-14T17:17:30 IST" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2020-07-14T17:17:31 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Simple login test"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Login functionality]"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [http://localhost:8080/cucumber_parser/homepage.html] but found [null]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [http://localhost:8080/cucumber_parser/homepage.html] but found [null]
+at org.testng.Assert.fail(Assert.java:97)
+at org.testng.Assert.failNotEquals(Assert.java:969)
+at org.testng.Assert.assertEqualsImpl(Assert.java:131)
+at org.testng.Assert.assertEquals(Assert.java:118)
+at org.testng.Assert.assertEquals(Assert.java:575)
+at org.testng.Assert.assertEquals(Assert.java:585)
+at StepDefinitions.LoginSteps.user_is_navigated_to_homepage(LoginSteps.java:72)
+at ✽.user is navigated to homepage(file:///C:/Users/V.X.V.K/eclipse-workspace/cucumber_parser/src/test/resources/Features/login.feature:25)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method status="PASS" signature="tearDownr(org.testng.ITestResult)[pri:0, instance:cucumber_parser.TestNGRunner@78e67e0a]" name="tearDownr" is-config="true" duration-ms="0" started-at="2020-07-14T17:17:31 IST" finished-at="2020-07-14T17:17:31 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=runScenario status=FAILURE method=AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:cucumber_parser.TestNGRunner@78e67e0a] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownr -->
+        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:cucumber_parser.TestNGRunner@78e67e0a]" name="runScenario" duration-ms="332" started-at="2020-07-14T17:17:31 IST" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2020-07-14T17:17:31 IST">
           <params>
             <param index="0">
               <value>
@@ -30,10 +122,33 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:cucumber_parser.TestNGRunner@3b088d51]" name="tearDownClass" is-config="true" duration-ms="10" started-at="2020-07-08T17:51:15 IST" finished-at="2020-07-08T17:51:15 IST">
+        <test-method status="PASS" signature="tearDownr(org.testng.ITestResult)[pri:0, instance:cucumber_parser.TestNGRunner@78e67e0a]" name="tearDownr" is-config="true" duration-ms="258" started-at="2020-07-14T17:17:31 IST" finished-at="2020-07-14T17:17:31 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=runScenario status=SUCCESS method=AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:cucumber_parser.TestNGRunner@78e67e0a] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownr -->
+        <test-method status="PASS" signature="takeScreenshot()[pri:0, instance:cucumber_parser.TestNGRunner@78e67e0a]" name="takeScreenshot" is-config="true" duration-ms="220" started-at="2020-07-14T17:17:31 IST" finished-at="2020-07-14T17:17:31 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- takeScreenshot -->
+        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:cucumber_parser.TestNGRunner@78e67e0a]" name="tearDownClass" is-config="true" duration-ms="73" started-at="2020-07-14T17:17:31 IST" finished-at="2020-07-14T17:17:32 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->
+        <test-method status="PASS" signature="generateHTMLReports()[pri:0, instance:cucumber_parser.TestNGRunner@78e67e0a]" name="generateHTMLReports" is-config="true" duration-ms="1352" started-at="2020-07-14T17:17:32 IST" finished-at="2020-07-14T17:17:33 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- generateHTMLReports -->
+        <test-method status="PASS" signature="quit()[pri:0, instance:cucumber_parser.TestNGRunner@78e67e0a]" name="quit" is-config="true" duration-ms="620" started-at="2020-07-14T17:17:33 IST" finished-at="2020-07-14T17:17:34 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- quit -->
       </class> <!-- cucumber_parser.TestNGRunner -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->

@@ -5,8 +5,13 @@
     <classes>
       <class name="cucumber_parser.TestNGRunner">
         <methods>
-          <include name="runScenario" invocation-numbers="0"/>
+          <include name="quit"/>
+          <include name="runScenario" invocation-numbers="0 1"/>
+          <include name="initFeatureFile"/>
           <include name="tearDownClass"/>
+          <include name="generateHTMLReports"/>
+          <include name="takeScreenshot"/>
+          <include name="tearDownr"/>
           <include name="setUpClass"/>
         </methods>
       </class> <!-- cucumber_parser.TestNGRunner -->
