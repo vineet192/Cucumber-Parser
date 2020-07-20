@@ -49,11 +49,9 @@ public class FeatureParser {
 			String text = matcher.group(1);
 			String dataTable = getDataTable(text);
 			if (!dataTable.equals("|")) {
-				fileContent = fileContent.replaceAll("#!" + text, dataTable);
-				System.out.println("Replaced \"#!"+text+"\" with data table successfully");
-			}
-			else
-			{
+				fileContent = fileContent.replaceAll("#!" + text, "#!" + text + "\n" + "Examples:\n" + dataTable);
+				System.out.println("Replaced \"#!" + text + "\" with data table successfully");
+			} else {
 				fileContent = fileContent.replaceAll("#!" + text, "#Data table not found");
 			}
 		}
@@ -61,6 +59,17 @@ public class FeatureParser {
 		writer.write(fileContent);
 		writer.close();
 
+	}
+
+	public void revertDataTablesToMarkers(String fileLocation) throws IOException {
+		String fileContent = Files.asCharSource(new File(fileLocation), StandardCharsets.UTF_8).read();
+		FileWriter writer = new FileWriter(fileLocation, false);
+
+		fileContent = fileContent.replaceAll("(Examples\\:[\s]*\n(\\|.*\\|\n)*)", "");
+		System.out.println("Reverted");
+
+		writer.write(fileContent);
+		writer.close();
 	}
 
 	// Helper method that constructs a data table, given the Scenario name
@@ -78,7 +87,7 @@ public class FeatureParser {
 			}
 			dataTableString.append("\n");
 
-			DbDataTable = (ArrayList<Document>) d.get("data-table");
+			DbDataTable = (ArrayList<Document>) d.get("example_table");
 
 			// For each row of the data table.
 			for (Document row : DbDataTable) {
@@ -102,6 +111,7 @@ public class FeatureParser {
 		String filepath = "src/test/resources/Features/login.feature";
 		try {
 			parser.replaceMarkersInFeatureFile(filepath);
+			parser.revertDataTablesToMarkers(filepath);
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

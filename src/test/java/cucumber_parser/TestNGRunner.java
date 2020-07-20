@@ -1,5 +1,6 @@
 package cucumber_parser;
 
+import io.cucumber.java.Before;
 import io.cucumber.testng.AbstractTestNGCucumberTests;
 import io.cucumber.testng.CucumberOptions;
 
@@ -36,6 +37,8 @@ public class TestNGRunner extends AbstractTestNGCucumberTests {
 
 	public static Properties config = null;
 	public static WebDriver driver = null;
+	public static String featureFileDir = "src/test/resources/Features";
+	public static FeatureParser parser = null;
 
 	public void LoadConfigProperty() throws IOException {
 		config = new Properties();
@@ -76,7 +79,8 @@ public class TestNGRunner extends AbstractTestNGCucumberTests {
 			driver = new FirefoxDriver();
 		} else if (config.getProperty("browserType").equals("chrome")) {
 			ChromeOptions options = new ChromeOptions();
-			options.addArguments("--headless");
+			// Uncomment this argument to allow chrome to run in the background
+//			options.addArguments("--headless");
 			options.addArguments("--disable-gpu");
 			options.addArguments("--no-sandbox");
 			options.addArguments("--disable-dev-shm-usage");
@@ -108,8 +112,8 @@ public class TestNGRunner extends AbstractTestNGCucumberTests {
 
 	public void setEnv() throws Exception {
 		LoadConfigProperty();
-		String baseUrl = config.getProperty("siteUrl");
-		driver.get(baseUrl);
+		// String baseUrl = config.getProperty("siteUrl");
+		// driver.get(baseUrl);
 	}
 
 	public static String currentDateTime() {
@@ -119,22 +123,31 @@ public class TestNGRunner extends AbstractTestNGCucumberTests {
 		return cal1;
 	}
 
-	// Initialise the feature file by replacing the #! markers.
 	@BeforeSuite(alwaysRun = true)
-	void initFeatureFile() throws Exception {
+	void initBrowser() throws Exception {
 		openBrowser();
 		maximizeWindow();
 		implicitWait(30);
 		deleteAllCookies();
 		setEnv();
-		FeatureParser parser = new FeatureParser();
+	}
+
+	// Initialise the feature file by replacing the #! markers.
+	@BeforeSuite(alwaysRun = true)
+	void initFeatureFile() throws Exception {
+		parser = new FeatureParser();
 		parser.connectToDatabase();
-		String filepath = "src/test/resources/Features/login.feature";
-		try {
-			parser.replaceMarkersInFeatureFile(filepath);
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+		File[] featureFiles = new File(featureFileDir).listFiles();
+
+		for (File file : featureFiles) {
+			String filepath = "src/test/resources/Features/" + file.getName();
+			try {
+				parser.replaceMarkersInFeatureFile(filepath);
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+
 		}
 	}
 
@@ -161,10 +174,27 @@ public class TestNGRunner extends AbstractTestNGCucumberTests {
 		}
 
 	}
-	
-	@AfterSuite(alwaysRun=true)
+
+	@AfterSuite(alwaysRun = true)
 	public void generateHTMLReports() {
-		ReportHelper.generateCucumberReport();
+		// ReportHelper.generateCucumberReport();
+		File[] featureFiles = new File(featureFileDir).listFiles();
+
+		for (File file : featureFiles) {
+			String filepath = "src/test/resources/Features/" + file.getName();
+			try {
+				parser.revertDataTablesToMarkers(filepath);
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+
+		}
+	}
+
+	@AfterGroups(alwaysRun = true)
+	public void revertMarkers() {
+
 	}
 
 	@AfterSuite(alwaysRun = true)
