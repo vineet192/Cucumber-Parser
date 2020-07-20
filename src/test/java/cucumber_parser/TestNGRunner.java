@@ -176,8 +176,8 @@ public class TestNGRunner extends AbstractTestNGCucumberTests {
 	}
 
 	@AfterSuite(alwaysRun = true)
-	public void generateHTMLReports() {
-		// ReportHelper.generateCucumberReport();
+	public void revertTables() {
+		//ReportHelper.generateCucumberReport();
 		File[] featureFiles = new File(featureFileDir).listFiles();
 
 		for (File file : featureFiles) {
