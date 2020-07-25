@@ -80,7 +80,7 @@ public class TestNGRunner extends AbstractTestNGCucumberTests {
 		} else if (config.getProperty("browserType").equals("chrome")) {
 			ChromeOptions options = new ChromeOptions();
 			// Uncomment this argument to allow chrome to run in the background
-//			options.addArguments("--headless");
+			options.addArguments("--headless");
 			options.addArguments("--disable-gpu");
 			options.addArguments("--no-sandbox");
 			options.addArguments("--disable-dev-shm-usage");

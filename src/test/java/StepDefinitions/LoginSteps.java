@@ -20,7 +20,7 @@ import io.cucumber.java.en.When;
  * This class contains definitions for steps to perform a simple login on the html pages in WebContent folder.
  * Driver used is chromedriver for chrome 83.0.x
  */
-public class LoginSteps extends TestNGRunner{
+public class LoginSteps extends TestNGRunner {
 
 	WebElement username;
 	WebElement password;
@@ -31,7 +31,7 @@ public class LoginSteps extends TestNGRunner{
 
 		System.out.println("Navigating to login page");
 		driver.get("http://localhost:8080/cucumber_parser/login.html");
-		
+
 		System.out.println("Current url is " + driver.getCurrentUrl());
 
 	}
@@ -39,10 +39,10 @@ public class LoginSteps extends TestNGRunner{
 	@When("user enters {string} and {string}")
 	public void user_enters_and(String string, String string2) {
 		// Write code here that turns the phrase above into concrete actions
-		
+
 		WebDriverWait wait = new WebDriverWait(driver, 4000);
 		wait.until(ExpectedConditions.visibilityOfElementLocated((By.id("username"))));
-		
+
 		username = driver.findElement(By.id("username"));
 		password = driver.findElement(By.id("password"));
 		System.out.println("Entering username and password as " + username + " & " + password + "\n");
@@ -66,9 +66,10 @@ public class LoginSteps extends TestNGRunner{
 		try {
 			actualUrl = driver.getCurrentUrl();
 		} catch (UnhandledAlertException e) {
-			e.printStackTrace();
+			System.out.println("Wrong username or password");
 		}
 		String expectedUrl = "http://localhost:8080/cucumber_parser/homepage.html";
+
 		Assert.assertEquals(actualUrl, expectedUrl);
 	}
 }
